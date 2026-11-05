@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solat Time Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="brand">
+      <img src="logo.svg" alt="" width="34" height="34">
+      <span>SolatTime</span>
+    </div>
+    <a href="index.html" class="active">Solat Time</a>
+    <a href="notes.html">Reflections and Notes</a>
+  </nav>
+
+  <main class="page">
+    <section class="head">
+      <div>
+        <div class="head-label">Prayer times in</div>
+        <h1 id="locationTitle">Search a city</h1>
+      </div>
+      <div class="head-right">
+        <div id="dateInfo" class="date-info"></div>
+        <div id="sunInfo" class="pill"></div>
+      </div>
+    </section>
+
+    <div class="search">
+      <input type="text" id="city" placeholder="City (e.g. Shah Alam)" />
+      <span class="divider"></span>
+      <input type="text" id="country" placeholder="Country (e.g. Malaysia)" />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="errorMsg" class="error" style="display:none;"></div>
+
+    <section id="mainContent" style="display:none;">
+      <div id="result" class="cards"></div>
+
+      <div class="info-grid">
+        <article id="suggestionBox" class="panel"></article>
+        <article id="calcBox" class="panel"></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

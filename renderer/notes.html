@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Prayer Reflections & Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="brand">
+      <img src="logo.svg" alt="" width="34" height="34">
+      <span>SolatTime</span>
+    </div>
+    <a href="index.html">Solat Time</a>
+    <a href="notes.html" class="active">Reflections and Notes</a>
+  </nav>
+
+  <header class="hero hero-small">
+    <h1 id="title">Prayer reflections and notes</h1>
+    <p class="tagline">Write a du'a, a reflection, or a daily tracker</p>
+  </header>
+
+  <main>
+    <div class="notes-layout">
+      <section class="card">
+        <h3>Add or edit a note</h3>
+        <div class="field">
+          <input type="hidden" id="editIndex" value="-1">
+          <label for="dateInput">Date</label>
+          <input type="date" id="dateInput">
+          <label for="noteInput">Note</label>
+          <textarea id="noteInput" rows="4" placeholder="Write your personal du'a, reflection, or tracker..."></textarea>
+          <button id="saveBtn">Save record</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Saved records</h3>
+        <ul id="notesList" class="records"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="notes.js"></script>
+</body>
+</html>
